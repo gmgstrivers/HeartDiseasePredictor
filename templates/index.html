@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>HEART DISEASE PREDICTOR</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+ <div class="login">
+	<h1><marquee scrollamount="15" behavior=scroll>HEART DISEASE PREDICTOR</marquee></h1>
+    <form action="{{ url_for('predict')}}"method="post">
+        <label for="ge">Gender:</label>
+    	<input type="text" name="Gender" placeholder="Gender" id="ge" required="Please Fill In." />
+        <br>
+        <br>
+        <label for="cpd">Cigarette Per Day:</label>
+        <input type="text" name="Cigarette Per Day" placeholder="Cigarette Per Day" id="cpd" required="Pleae Fill In" />
+        <br>
+        <br>
+        <label for="hs">Heart Stroke In Past:</label>
+		<input type="text" name="Heart Stroke In Past" placeholder="Heart Stroke In Past" id="hs" required="required" />
+        <br>
+        <br>
+        <label for="db">Diabetes:</label>
+		<input type="text" name="Diabetes" placeholder="Diabetes" id="db" required="required" />
+        <br>
+        <br>
+        <label for="bp">Blood Pressure</label>
+        <input type="text" name="Blood Pressure" placeholder="Blood Pressure" id="bp" required="required" />
+        <br>
+        <br>
+        <label for="hr">Heart Rate</label>
+        <input type="text" name="Heart Rate" placeholder="Heart Rate" id="hr" required="required" />
+        <br>
+        <br>
+        <label for="age">Age</label>
+        <input type="text" name="Age" placeholder="Age" id="age" required="required" />
+        <br>
+        <br>
+        <label for="bpm">BP Medicine</label>
+        <input type="text" name="BP Medicine" id="bpm" placeholder="Bp Medicine" required="required" />
+        <br>
+        <br>
+        <label for="hyp">Hypertension</label>
+        <input type="text" name="Hypertension" placeholder="Hyper Tension" id="hyp" required="required" />
+        <br>
+        <br>
+        <label for="chl">Cholesterol</label>
+        <input type="text" name="Cholesterol" placeholder="Cholesterol" id="chl" required="required" />
+        <br>
+        <br>
+        <label for="bmi">Body Mass Index</label>
+        <input type="text" name="Body Mass Index" placeholder="Body Mass Index" id="bmi" required="required" />
+        <br>
+        <br>
+        <label for="gl">Glucose</label>
+        <input type="text" name="Glucose" placeholder="Glucose" id="gl" required="required" />
+        <br>
+        <br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{prediction_text}}
+
+ </div>
+
+
+</body>
+</html>
